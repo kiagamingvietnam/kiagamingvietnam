@@ -1,0 +1,102 @@
+--Made By KiA
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("ScrollingFrame")
+local made = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local mokuro = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+main.BorderColor3 = Color3.fromRGB(0, 255, 0)
+main.BorderSizePixel = 5
+main.Position = UDim2.new(0.334794044, 0, 0.242519692, 0)
+main.Size = UDim2.new(0, 459, 0, 424)
+main.BottomImage = "http://www.roblox.com/asset/?id=6859006668"
+main.Visible = false 
+main.Active = true
+main.Draggable = true
+
+made.Name = "made"
+made.Parent = main
+made.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+made.BorderColor3 = Color3.fromRGB(0, 255, 0)
+made.BorderSizePixel = 5
+made.Position = UDim2.new(0.241830051, 0, -0.00102256425, 0)
+made.Size = UDim2.new(0, 326, 0, 38)
+made.Font = Enum.Font.GothamBold
+made.Text = "Made By KiA <3"
+made.TextColor3 = Color3.fromRGB(0, 255, 127)
+made.TextSize = 20.000
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+close.BorderColor3 = Color3.fromRGB(0, 255, 0)
+close.BorderSizePixel = 5
+close.Size = UDim2.new(0, 111, 0, 37)
+close.Font = Enum.Font.GothamBold
+close.Text = "KiAHub"
+close.TextColor3 = Color3.fromRGB(0, 255, 127)
+close.TextSize = 25.000
+close.MouseButton1Down:connect(function()
+	main.Visible = false
+	openmain.Visible = true
+end)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel.BorderSizePixel = 5
+TextLabel.Position = UDim2.new(0.26797387, 0, 0.0496063009, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Blox Fruit"
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 127)
+TextLabel.TextSize = 35.000
+
+mokuro.Name = "mokuro"
+mokuro.Parent = main
+mokuro.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+mokuro.BorderColor3 = Color3.fromRGB(0, 255, 0)
+mokuro.BorderSizePixel = 5
+mokuro.Position = UDim2.new(0.0522875786, 0, 0.12183173, 0)
+mokuro.Size = UDim2.new(0, 120, 0, 50)
+mokuro.Selected = true
+mokuro.Font = Enum.Font.GothamBold
+mokuro.Text = "Mokuro"
+mokuro.TextColor3 = Color3.fromRGB(0, 255, 127)
+mokuro.TextSize = 25.000
+mokuro.TextWrapped = true
+mokuro.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0.0762489066, 0, 0.299212605, 0)
+openmain.Size = UDim2.new(0, 50, 0, 33)
+main.Active = true
+main.Draggable = true
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+open.Size = UDim2.new(0, 50, 0, 33)
+open.Font = Enum.Font.GothamBold
+open.Text = "X"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextSize = 30.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+	openmain.Visible = false
+	main.Visible = true
+end)
